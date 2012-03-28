@@ -1,5 +1,5 @@
 Name:           berusky2
-Version:        0.6.1
+Version:        0.7
 Release:        1%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
@@ -77,6 +77,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Wed Mar 28 2012 Martin Stransky <stransky@redhat.com> 0.7-1
+- Updated to 0.7
+
 * Mon Mar 5 2012 Martin Stransky <stransky@redhat.com> 0.6.1-1
 - Updated to 0.6.1
 
