@@ -6,6 +6,7 @@ Summary:        Sokoban clone
 Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 URL:            http://www.anakreon.cz/en/Berusky2.htm
+Patch0:         berusky2-0.7-glut.patch
 
 Requires:       berusky2-data >= 0.6
 BuildRequires:  SDL-devel
@@ -26,6 +27,7 @@ which increases throughout the game.
 
 %prep
 %setup -q
+%patch0 -p1 -b .glut
 
 %build
 %configure CFLAGS="$RPM_OPT_FLAGS"
