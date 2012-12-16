@@ -1,12 +1,11 @@
 Name:           berusky2
-Version:        0.7
-Release:        3%{?dist}
+Version:        0.8
+Release:        2%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 URL:            http://www.anakreon.cz/en/Berusky2.htm
-Patch0:         berusky2-0.7-glut.patch
 
 Requires:       berusky2-data >= 0.6
 BuildRequires:  SDL-devel
@@ -27,7 +26,6 @@ which increases throughout the game.
 
 %prep
 %setup -q
-%patch0 -p1 -b .glut
 
 %build
 %configure CFLAGS="$RPM_OPT_FLAGS"
@@ -79,6 +77,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sun Dec 16 2012 Martin Stransky <stransky@redhat.com> 0.8-2
+- Updated to 0.8
+
 * Wed Jul 18 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.7-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
