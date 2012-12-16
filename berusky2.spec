@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -77,7 +77,7 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
-* Sun Dec 16 2012 Martin Stransky <stransky@redhat.com> 0.8-1
+* Sun Dec 16 2012 Martin Stransky <stransky@redhat.com> 0.8-2
 - Updated to 0.8
 
 * Wed Jul 18 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.7-3
