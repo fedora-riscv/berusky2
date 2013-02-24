@@ -77,7 +77,7 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
-* Sun Feb 16 2012 Martin Stransky <stransky@redhat.com> 0.9-1
+* Sun Feb 24 2013 Martin Stransky <stransky@redhat.com> 0.9-1
 - Updated to 0.9
 
 * Sun Dec 16 2012 Martin Stransky <stransky@redhat.com> 0.8-2
