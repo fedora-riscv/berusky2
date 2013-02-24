@@ -1,13 +1,13 @@
 Name:           berusky2
-Version:        0.8
-Release:        2%{?dist}
+Version:        0.9
+Release:        1%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
-Requires:       berusky2-data >= 0.6
+Requires:       berusky2-data >= 0.7
 BuildRequires:  SDL-devel
 BuildRequires:  SDL_image-devel
 BuildRequires:  gtk2-devel
@@ -77,6 +77,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sun Feb 16 2012 Martin Stransky <stransky@redhat.com> 0.9-1
+- Updated to 0.9
+
 * Sun Dec 16 2012 Martin Stransky <stransky@redhat.com> 0.8-2
 - Updated to 0.8
 
