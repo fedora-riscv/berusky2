@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.9
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -77,6 +77,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.9-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Sun Feb 24 2013 Martin Stransky <stransky@redhat.com> 0.9-1
 - Updated to 0.9
 
