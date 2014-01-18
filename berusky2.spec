@@ -1,5 +1,5 @@
 Name:           berusky2
-Version:        0.9
+Version:        0.10
 Release:        1%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
@@ -7,7 +7,7 @@ Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
-Requires:       berusky2-data >= 0.7
+Requires:       berusky2-data >= 0.9
 BuildRequires:  SDL-devel
 BuildRequires:  SDL_image-devel
 BuildRequires:  gtk2-devel
@@ -77,6 +77,12 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sat Jan 18 2014 Martin Stransky <stransky@redhat.com> 0.10-1
+- Updated to 0.10
+
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.9-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Sun Feb 24 2013 Martin Stransky <stransky@redhat.com> 0.9-1
 - Updated to 0.9
 
