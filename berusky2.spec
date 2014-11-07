@@ -1,10 +1,12 @@
 Name:           berusky2
 Version:        0.10
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
+Source1:        berusky2.appdata.xml
+Source2:        berusky2.png
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
 Requires:       berusky2-data >= 0.9
@@ -46,15 +48,17 @@ install -pm 644 %{buildroot}/%{_datadir}/%{name}/berusky3d.ini \
                 %{buildroot}%{_var}/games/%{name}
 
 # Install icon and desktop file
-mkdir -p %{buildroot}/%{_datadir}/icons/hicolor/32x32/apps
-cp -p %{buildroot}/%{_datadir}/%{name}/berusky2.png \
-      %{buildroot}/%{_datadir}/icons/hicolor/32x32/apps
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/icons/hicolor/128x128/apps
+cp %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/icons/hicolor/128x128/apps
 
 desktop-file-install --dir %{buildroot}/%{_datadir}/applications \
                      --add-category X-Fedora %{buildroot}/%{_datadir}/%{name}/berusky2.desktop
 
 # Remove directory that will be owned by data package.
 rm -rf %{buildroot}/%{_datadir}/%{name}
+
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/appdata/
+cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 
 %post
 touch --no-create %{_datadir}/icons/hicolor || :
@@ -72,11 +76,15 @@ fi
 %doc _tmpdoc/*
 %{_bindir}/berusky2
 %{_datadir}/applications/berusky2.desktop
-%{_datadir}/icons/hicolor/32x32/apps/berusky2.png
+%{_datadir}/icons/hicolor/128x128/apps/berusky2.png
+%{_datadir}/appdata/berusky2.appdata.xml
 %dir %{_var}/games/%{name}
 %{_var}/games/%{name}/*
 
 %changelog
+* Fri Nov 7 2014 Martin Stransky <stransky@redhat.com> 0.10-5
+- Added appdata file
+
 * Fri Aug 15 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.10-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
