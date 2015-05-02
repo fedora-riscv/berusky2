@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -82,6 +82,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sat May 02 2015 Kalev Lember <kalevlember@gmail.com> - 0.10-6
+- Rebuilt for GCC 5 C++11 ABI change
+
 * Fri Nov 7 2014 Martin Stransky <stransky@redhat.com> 0.10-5
 - Added appdata file
 
