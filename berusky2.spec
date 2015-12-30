@@ -1,12 +1,13 @@
 Name:           berusky2
 Version:        0.10
-Release:        7%{?dist}
+Release:        8%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 Source1:        berusky2.appdata.xml
 Source2:        berusky2.png
+Patch0:         berusky2-anim-crash.patch
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
 Requires:       berusky2-data >= 0.9
@@ -28,6 +29,7 @@ which increases throughout the game.
 
 %prep
 %setup -q
+%patch0 -p1 -b .anim-crash
 
 %build
 %configure CFLAGS="$RPM_OPT_FLAGS"
@@ -82,6 +84,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Wed Dec 30 2015 Martin Stransky <stransky@redhat.com> 0.10-8
+- fixec animation crashes
+
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.10-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
