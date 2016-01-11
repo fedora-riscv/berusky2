@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        8%{?dist}
+Release:        9%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -84,8 +84,11 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Mon Jan 11 2015 Martin Stransky <stransky@redhat.com> 0.10-9
+- fixes more animation crashes (water, teleports, lifts)
+
 * Wed Dec 30 2015 Martin Stransky <stransky@redhat.com> 0.10-8
-- fixec animation crashes
+- fixes animation crashes
 
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.10-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
