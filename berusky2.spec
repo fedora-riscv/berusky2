@@ -84,7 +84,7 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
-* Mon Jan 11 2015 Martin Stransky <stransky@redhat.com> 0.10-9
+* Mon Jan 11 2016 Martin Stransky <stransky@redhat.com> 0.10-9
 - fixes more animation crashes (water, teleports, lifts)
 
 * Wed Dec 30 2015 Martin Stransky <stransky@redhat.com> 0.10-8
