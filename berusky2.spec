@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        11%{?dist}
+Release:        12%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -86,6 +86,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-12
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Sun Feb 14 2016 Martin Stransky <stransky@redhat.com> 0.10-11
 - gcc6 build fix
 
