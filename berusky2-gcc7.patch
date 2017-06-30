@@ -1,0 +1,48 @@
+diff --git a/src/kofola/Menu.cpp b/src/kofola/Menu.cpp
+index da8a32a..678bb8f 100644
+--- a/src/kofola/Menu.cpp
++++ b/src/kofola/Menu.cpp
+@@ -282,7 +282,7 @@ void AnimationEvent(DWORD dwTime, AUDIO_DATA * p_ad)
+   char bAnim = 0;
+   DWORD e;
+ 
+-  e = abs(dwLTime - dwTime);
++  e = abs((int)(dwLTime - dwTime));
+ 
+   for (i = 0; i < 32; i++)
+     if (anm[i].cmd) {
+diff --git a/src/kofola/Menu2.cpp b/src/kofola/Menu2.cpp
+index 2591982..45b0a37 100644
+--- a/src/kofola/Menu2.cpp
++++ b/src/kofola/Menu2.cpp
+@@ -232,7 +232,7 @@ void AnimationEvent2(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime)
+   //priprava 
+   //BitBltU(CompositDC,0,0,1024,768,NULL,0,0,WHITENESS);
+ 
+-  e = abs(dwLTime - dwTime);
++  e = abs((int)(dwLTime - dwTime));
+   for (i = 0; i < 32; i++)
+     if (anm[i].cmd) {
+       if (anm[i].bStop) {
+diff --git a/src/kofola/animend_functions.cpp b/src/kofola/animend_functions.cpp
+index ff8d92a..ecad6d5 100644
+--- a/src/kofola/animend_functions.cpp
++++ b/src/kofola/animend_functions.cpp
+@@ -359,7 +359,7 @@ void anmend_Lift(size_ptr param, size_ptr param2, size_ptr p_param)
+   s = ap_Play_Sound(0,0,0, pos, p_itm->p_Object->Specific[0].Index, NULL, &ad);
+ 
+   if (s >= 0) {
+-		for(i=0;i<(abs(param)-1);i++)
++		for(i=0;i<(abs((int)param)-1);i++)
+ 			adas_Queue_Sound(s, p_itm->p_Object->Specific[1].Index);
+ 
+ 		adas_Queue_Sound(s, p_itm->p_Object->Specific[2].Index);
+@@ -371,7 +371,7 @@ void anmend_Lift(size_ptr param, size_ptr param2, size_ptr p_param)
+     if (s < 0)
+       return;
+ 
+-    p_Level->LiftParticles[s].dwStop = abs(param) * 250;
++    p_Level->LiftParticles[s].dwStop = abs((int)param) * 250;
+   }
+ }
+ 

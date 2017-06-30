@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        12%{?dist}
+Release:        13%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -9,6 +9,7 @@ Source1:        berusky2.appdata.xml
 Source2:        berusky2.png
 Patch0:         berusky2-anim-crash.patch
 Patch1:         berusky2-gcc6.patch
+Patch2:         berusky2-gcc7.patch
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
 Requires:       berusky2-data >= 0.9
@@ -32,6 +33,7 @@ which increases throughout the game.
 %setup -q
 %patch0 -p1 -b .anim-crash
 %patch1 -p1 -b .gcc
+%patch2 -p1 -b .gcc7
 
 %build
 %configure CFLAGS="$RPM_OPT_FLAGS"
@@ -86,6 +88,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Fri Jun 30 2017 Martin Stransky <stransky@redhat.com> 0.10-13
+- gcc7 build fix
+
 * Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-12
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
