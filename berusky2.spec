@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        13%{?dist}
+Release:        14%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -21,7 +21,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  freealut-devel
 BuildRequires:  openal-soft-devel
 BuildRequires:  libvorbis-devel
-ExclusiveArch:  %{ix86} x86_64 %{arm} aarch64
+ExclusiveArch:  %{ix86} x86_64 %{arm} aarch64 %{mips}
 
 %description
 Berusky 2 is a game that challenges your visual/spatial thinking
@@ -90,6 +90,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Wed Jul 12 2017 Michal Toman <mtoman@fedoraproject.org> 0.10-14
+- Enable on MIPS
+
 * Fri Jun 30 2017 Martin Stransky <stransky@redhat.com> 0.10-13
 - gcc7 build fix
 - mmalloc link patch
