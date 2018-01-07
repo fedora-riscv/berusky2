@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        16%{?dist}
+Release:        17%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Group:          Amusements/Games
@@ -68,18 +68,6 @@ rm -rf %{buildroot}/%{_datadir}/%{name}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/appdata/
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 
-%post
-touch --no-create %{_datadir}/icons/hicolor || :
-if [ -x %{_bindir}/gtk-update-icon-cache ]; then
- %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
-fi
-
-%postun
-touch --no-create %{_datadir}/icons/hicolor || :
-if [ -x %{_bindir}/gtk-update-icon-cache ]; then
- %{_bindir}/gtk-update-icon-cache --quiet %{_datadir}/icons/hicolor || :
-fi
-
 %files
 %doc _tmpdoc/*
 %{_bindir}/berusky2
@@ -90,6 +78,9 @@ fi
 %{_var}/games/%{name}/*
 
 %changelog
+* Sun Jan 07 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.10-17
+- Remove obsolete scriptlets
+
 * Wed Aug 02 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-16
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
 
