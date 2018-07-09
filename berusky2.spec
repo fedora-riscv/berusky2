@@ -14,6 +14,7 @@ Patch3:         berusky2-mmalloc.patch
 URL:            http://www.anakreon.cz/en/Berusky2.htm
 
 Requires:       berusky2-data >= 0.9
+BuildRequires:  gcc
 BuildRequires:  SDL-devel
 BuildRequires:  SDL_image-devel
 BuildRequires:  gtk2-devel
