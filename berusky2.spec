@@ -3,7 +3,6 @@ Version:        0.10
 Release:        19%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
-Group:          Amusements/Games
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
 Source1:        berusky2.appdata.xml
 Source2:        berusky2.png
