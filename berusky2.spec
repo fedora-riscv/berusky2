@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.10
-Release:        21%{?dist}
+Release:        22%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
@@ -79,6 +79,9 @@ cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 %{_var}/games/%{name}/*
 
 %changelog
+* Tue Jan 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-22
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Wed Jul 24 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-21
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
