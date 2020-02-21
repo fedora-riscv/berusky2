@@ -71,7 +71,7 @@ cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 %{_var}/games/%{name}/*
 
 %changelog
-* Fri Feb 21 2017 Martin Stransky <stransky@redhat.com> 0.11-1
+* Fri Feb 21 2020 Martin Stransky <stransky@redhat.com> 0.11-1
 - Updated to 0.11
 
 * Tue Jan 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.10-22
