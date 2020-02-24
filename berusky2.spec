@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.11
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
@@ -31,7 +31,10 @@ which increases throughout the game.
 %setup -q
 
 %build
-%configure CFLAGS="$RPM_OPT_FLAGS"
+#OPT_FLAGS=$(echo "$RPM_OPT_FLAGS" | %{__sed} -e 's/-O2//')
+#export CXXFLAGS=$OPT_FLAGS
+#export CFLAGS=$OPT_FLAGS
+%configure
 
 make %{?_smp_mflags}
 
@@ -71,6 +74,9 @@ cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 %{_var}/games/%{name}/*
 
 %changelog
+* Mon Feb 24 2020 Martin Stransky <stransky@redhat.com> 0.11-2
+- More fixes from 0.11
+
 * Fri Feb 21 2020 Martin Stransky <stransky@redhat.com> 0.11-1
 - Updated to 0.11
 
