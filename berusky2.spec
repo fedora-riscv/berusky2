@@ -1,9 +1,9 @@
 Name:           berusky2
 Version:        0.11
-Release:        2%{?dist}
+Release:        3%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
-Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
+Source:         http://www.anakreon.cz/download/%{name}-%{version}-2.tar.gz
 Source1:        berusky2.appdata.xml
 Source2:        berusky2.png
 URL:            http://www.anakreon.cz/en/Berusky2.htm
@@ -31,6 +31,7 @@ which increases throughout the game.
 %setup -q
 
 %build
+#Uncomment to produce a debug build
 #OPT_FLAGS=$(echo "$RPM_OPT_FLAGS" | %{__sed} -e 's/-O2//')
 #export CXXFLAGS=$OPT_FLAGS
 #export CFLAGS=$OPT_FLAGS
@@ -74,6 +75,9 @@ cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/appdata/
 %{_var}/games/%{name}/*
 
 %changelog
+* Wed Mar 04 2020 Martin Stransky <stransky@redhat.com> 0.11-3
+- More fixes from https://notabug.org/AsDaGo
+
 * Mon Feb 24 2020 Martin Stransky <stransky@redhat.com> 0.11-2
 - More fixes from 0.11
 
