@@ -18,6 +18,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  freealut-devel
 BuildRequires:  openal-soft-devel
 BuildRequires:  libvorbis-devel
+BuildRequires: make
 ExclusiveArch:  %{ix86} x86_64 %{arm} aarch64 %{mips}
 
 %description
