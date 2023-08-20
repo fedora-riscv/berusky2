@@ -1,6 +1,6 @@
 Name:           berusky2
 Version:        0.12
-Release:        7%{?dist}
+Release:        7.rv64%{?dist}
 License:        GPLv2+
 Summary:        Sokoban clone
 Source:         http://www.anakreon.cz/download/%{name}-%{version}.tar.gz
@@ -19,7 +19,7 @@ BuildRequires:  freealut-devel
 BuildRequires:  openal-soft-devel
 BuildRequires:  libvorbis-devel
 BuildRequires: make
-ExclusiveArch:  %{ix86} x86_64 %{arm} aarch64 %{mips}
+ExclusiveArch:  %{ix86} x86_64 %{arm} aarch64 %{mips} riscv64
 
 %description
 Berusky 2 is a game that challenges your visual/spatial thinking
